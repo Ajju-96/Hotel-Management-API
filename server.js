@@ -8,6 +8,7 @@ const MenuItem = require("./model/MenuItem");
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json()); // Middleware to parse JSON bodies
+const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
 
 app.get("/", (req, res) => {
     res.send("Welcome to the Taj Hotel API");
@@ -41,7 +42,6 @@ newPerson.save(error, savePerson =>{
 
 
 
-const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
 
 app.listen(PORT, () => {
   console.log("Server is running on port:", PORT);

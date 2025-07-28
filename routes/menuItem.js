@@ -1,6 +1,6 @@
 const express = require('express');
-const MenuItem = require('../model/MenuItem'); // Import the MenuItem model
 const router = express.Router();
+const MenuItem = require('../model/MenuItem'); // Import the MenuItem model
 
 
 router.get("/", async (req, res) => {

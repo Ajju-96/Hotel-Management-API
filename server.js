@@ -1,14 +1,12 @@
+const express = require("express");
+const app = express();
+const db = require("./db"); // Import the database connection
 require("dotenv").config(); // Load environment variables from .env file
 
-const express = require("express");
-const db = require("./db"); // Import the database connection
-const MenuItem = require("./model/MenuItem");
 const bodyParser = require("body-parser");
-const app = express();
-
-
 app.use(bodyParser.json()); // Middleware to parse JSON bodies
-const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
+const PORT = process.env.PORT || 3000;
+
 
 app.get("/", (req, res) => {
     res.send("Welcome to the Taj Hotel API");

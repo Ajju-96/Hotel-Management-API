@@ -1,6 +1,6 @@
 const express = require('express');
-const Aperson = require('../model/Aperson'); // Import the Aperson model
 const router = express.Router();
+const Aperson = require('../model/Aperson'); // Import the Aperson model
 
 
 router.get('/', async (req, res) => {

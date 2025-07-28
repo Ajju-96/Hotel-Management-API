@@ -16,7 +16,7 @@ const Aperson = require('../model/Aperson'); // Import the Aperson model
 
 app.get("/Aperson", async (req, res) => {
   try {
-    const people = await YourModel.find(); // Replace YourModel with your actual model name (e.g., Aperson)
+    const people = await Aperson.find(); // Replace YourModel with your actual model name (e.g., Aperson)
 
     let rows = people.map(person => `
       <tr>

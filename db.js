@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost:27017/TajHotel'; // Replace 'yourdbname' with your database name
+// const mongoURI = 'mongodb://localhost:27017/TajHotel'; // Replace 'yourdbname' with your database name
+const mongoURI = process.env.URI; // Use environment variable or fallback to local MongoDB
+
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,

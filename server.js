@@ -1,7 +1,10 @@
+require("dotenv").config(); // Load environment variables from .env file
+
 const express = require("express");
 const app = express();
 const db = require("./db"); // Import the database connection
 const MenuItem = require("./model/MenuItem");
+
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json()); // Middleware to parse JSON bodies
@@ -38,6 +41,8 @@ newPerson.save(error, savePerson =>{
 
 
 
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
+
+app.listen(PORT, () => {
+  console.log("Server is running on port:", PORT);
 }); // Start the server on port 3000

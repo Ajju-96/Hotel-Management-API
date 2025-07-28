@@ -8,8 +8,41 @@ app.use(bodyParser.json()); // Middleware to parse JSON bodies
 const PORT = process.env.PORT || 3000;
 
 
+// app.get("/", (req, res) => {
+//     res.send("Welcome to the Taj Hotel API  For getting started, visit /Aperson or /menu");
+// });
 app.get("/", (req, res) => {
-    res.send("Welcome to the Taj Hotel API\n For getting started, visit /Aperson or /menu");
+  res.send(`
+    <html>
+      <head>
+        <title>Taj Hotel API</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+          }
+          h1 {
+            color: #2e8b57;
+          }
+          p {
+            font-size: 18px;
+          }
+          a {
+            color: #1e90ff;
+            text-decoration: none;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Welcome to the Taj Hotel API</h1>
+        <p>For getting started, visit:</p>
+        <p><a href="/Aperson">/Aperson</a></p>
+        <p><a href="/menu">/menu</a></p>
+      </body>
+    </html>
+  `);
 });
 
 

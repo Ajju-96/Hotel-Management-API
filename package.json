@@ -1,0 +1,16 @@
+{
+  "name": "nodejstut",
+  "version": "1.0.0",
+  "description": "nodejs tut again form 25/7/2025",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajjubhai44",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5"
+  }
+}

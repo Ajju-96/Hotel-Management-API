@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require("dotenv").config(); 
 
 // const mongoURI = 'mongodb://localhost:27017/taj_hotel';
-const mongoURI = process.env.URI; // Use environment variable or fallback to local MongoDB
+const mongoURI = process.env.MONGO_URL; // Use environment variable or fallback to local MongoDB
 
 
 mongoose.connect(mongoURI, {

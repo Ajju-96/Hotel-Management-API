@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the Taj Hotel API");
+    res.send("Welcome to the Taj Hotel API\n For getting started, visit /Aperson or /menu");
 });
 
 

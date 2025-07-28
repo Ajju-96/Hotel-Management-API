@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const mongoURI = process.env.URI; // Use environment variable or fallback to local MongoDB
 
 
+
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

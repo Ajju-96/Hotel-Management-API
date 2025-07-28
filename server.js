@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 
 const personRouter = require("./routes/personRouter"); // Import the personRouter model
-const menuItem = require("./routes/MenuItem"); // Import the MenuItem model 
+const menuItem = require("./routes/menuItem"); // Import the MenuItem model 
 
 app.use("/Aperson", personRouter);
 app.use("/menu", menuItem);

@@ -5,10 +5,12 @@ require("dotenv").config();
 const mongoURI = process.env.MONGO_URL; // Use environment variable or fallback to local MongoDB
 
 
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  autoSelectFamily: false,
+  serverSelectionTimeoutMS: 5000,
+});
 
 const db = mongoose.connection;
 
